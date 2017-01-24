@@ -734,6 +734,10 @@ public:
 		else // qc_buildmode_debug
 			opts += "debug";
 
+		other += "QMAKE_CFLAGS += \$\$(CFLAGS)\\n";
+		other += "QMAKE_CXXFLAGS += \$\$(CXXFLAGS)\\n";
+		other += "QMAKE_LFLAGS += \$\$(LDFLAGS)\\n";
+
 		if(qc_buildmode_separate_debug_info)
 		{
 			opts += "separate_debug_info";
